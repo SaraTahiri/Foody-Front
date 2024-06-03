@@ -2,9 +2,15 @@ import React from 'react'
 import '../Css/orelega-one.css'
 import { Button } from 'react-bootstrap'
 import pizza from '../Images/image.png'
+import { useNavigate } from 'react-router-dom'
 
 
 const Welcome = () => {
+    const navigate = useNavigate()
+
+    const handleBrowseMenu = () => {
+        navigate('/Menus')
+    };
   return (
     <div>
       {/*Part one */}
@@ -17,7 +23,7 @@ const Welcome = () => {
                         <Button variant="secondary" className=" font-semibold mt-6 ml-4 w-48 h-12 border-transparent rounded-full left-109 top-552 bg-lime-600">
                             Order Now
                         </Button>
-                        <Button variant="outline-dark" className=" font-semibold mt-4 ml-4 w-48 h-12 rounded-full left-348 top-551">
+                        <Button variant="outline-dark" className=" font-semibold mt-4 ml-4 w-48 h-12 rounded-full left-348 top-551" onClick={handleBrowseMenu}>
                             Browse Menus
                         </Button>
                     </div>
